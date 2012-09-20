@@ -1,0 +1,112 @@
+ol {
+display: block;
+list-style-type: decimal;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+}
+.star_toplist .num{
+  color:#FFF;
+  background-color:#CCC;
+  text-align:center;
+  height:13px;
+  width:13px;
+  overflow:hidden;
+  font-size:10px;
+  line-height:13px;
+  margin-right:10px;
+  float:left;
+  -webkit-text-size-adjust:none;
+}
+.star_toplist .top1,.star_toplist .top2,.star_toplist .top3{
+  background-color:#F60;
+}
+.star_toplist li{
+  zoom:1;
+  clear:both;
+  overflow:hidden;
+}
+.star_toplist .index_list li{
+  border-bottom:1px dotted #B5B4B0;
+  padding:10px 0;
+}
+.star_toplist .index_list .userhead{
+  float:left;
+  margin-right:10px;
+}
+.star_toplist .index_list .icons{
+  display:block;
+  padding-top:4px;
+  *padding-top:3px;
+}
+.star_toplist .index_list .icons em{
+  margin-right:1px;
+}
+.star_toplist .flow_num{
+  float:right;
+  color:#666;
+}
+.star_toplist .ranking li{
+  border-bottom:1px dotted #A6D1E1;
+  padding:7px 0;
+}
+#js_style_css_module_star_toplist{
+  height:42px;
+}
+.home_ranking{
+  border-left:1px solid #DAD2B7;
+  background:#F5F1E1;
+}
+.home_ranking .ranking_tab a{
+  display:inline-block;
+  height:33px;
+  line-height:33px;
+  width:102px;
+  font-size:14px;
+  text-align:center;
+  background:#E9E3CB;
+  border:1px solid #E9E3CB;
+}
+.home_ranking .ranking_tab .effect{
+  border-right:1px solid #D0C7A8;
+  border-bottom:1px solid #D0C7A8;
+}
+.home_ranking .ranking_tab .hot{
+  border-left:1px solid #D0C7A8;
+  border-bottom:1px solid #D0C7A8;
+}
+.home_ranking .current a{
+  background:#F6F2E4;
+  color:#333;
+  text-decoration:none;
+  cursor:default;
+}
+.home_ranking .current .effect{
+  border-left:1px solid #FDFBF5;
+  border-top:1px solid #FDFBF5;
+  border-right:1px solid #F6F2E4;
+  border-bottom:1px solid #F6F2E4;
+}
+.home_ranking .current .hot{
+  border-right:1px solid #FDFBF5;
+  border-top:1px solid #FDFBF5;
+  border-left:1px solid #F6F2E4;
+  border-bottom:1px solid #F6F2E4;
+}
+.home_ranking .star_toplist .more{
+  padding-top:12px;
+  text-align:right;
+}
+.home_ranking .star_toplist{
+  padding:8px 13px 0 13px;
+  border-left:1px solid #FDFBF5;
+  height:450px;
+}
+#js_style_css_module_home_ranking{
+  height:42px;
+}
+#js_appstyle_star_css_pl_pl_home_ranking{
+  height:42px;
+}

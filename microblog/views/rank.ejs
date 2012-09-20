@@ -1,0 +1,23 @@
+<div id="pl_home_ranking">
+  <div class="ranking_tab">
+    <span class="  current" node-type="rankTab">
+      <a href="" class="effect" onclick="return false;">影响力排行</a>
+    </span>
+  </div>
+  <div class="star_toplist" node-type="rankBox" style="">
+  <ol class="index_list">
+  <% for (i in rank){ %>
+    <li>
+		  <div class="num top1"><%= rank[i].rank %></div>
+      <a href="/u/<%= rank[i].user %>"><%= rank[i].user %></a>
+      <span class="icons">
+      </span>
+    </li>
+  <% } %>
+  </ol>
+  <p class="more">
+    <a href="" class="effect" onclick="return false;">更多</a>
+  </p>
+  </div>
+</div>
+<!--/home_ranking-->

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %> - Microblog</title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
+    <link href="stylesheets/pl_home_ranking.css" rel="stylesheet">
+  </head>
+  <body>
+  
+    <header class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">Microblog</a>
+          <nav class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="/">首页</a></li>
+              <li><a href="/rank">排行榜</a></li>
+              <% if (!user) { %>
+                <li><a href="/login">登录</a></li>
+                <li><a href="/reg">注册</a></li>
+              <% } else { %>
+                <li><a href="/logout">登出</a></li>
+              <% } %>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <div id="container" class="container">
+      <% if (success) { %>
+        <div class="alert alert-success">
+          <%= success %>
+        </div>
+      <% } %>
+      <% if (error) { %>
+        <div class="alert alert-error">
+          <%= error %>
+        </div>
+      <% } %>
+      <%- body %>
+      <hr />
+      <footer>
+        <p><a href="http://hi.baidu.com/new/unabara_zyf" target="_blank">Developer</a> 2012</p>
+      </footer>
+    </div>
+  </body>
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+</html>
