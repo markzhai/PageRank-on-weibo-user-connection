@@ -1,8 +1,6 @@
 # Apps Makefile
-# Copyright (C) 2011-2012 Rong Chen <realstolz at gmail dot com>
-# This file is released under the BSD license, see the COPYING file
 
-BINS=pagerank #test
+BINS=pagerank
 OBJS=vec.o web.o algorithm.o comm.o
 LIBNAME=libhiredis
 
@@ -13,7 +11,7 @@ WARN=-Wall -W -Wstrict-prototypes -Wwrite-strings
 DEBUG?= -g -ggdb
 
 REAL_CFLAGS=$(OPT) -fPIC $(CFLAGS) $(WARN) -D_GNU_SOURCE $(DEBUG)
-REAL_LDFLAGS=$(LDFLAGS) -lm -lpthread
+REAL_LDFLAGS=$(LDFLAGS)
 
 DYLIBNAME=./lib/$(LIBNAME).so
 STLIBNAME=./lib/$(LIBNAME).a
@@ -25,10 +23,10 @@ DEP=$(STLIBNAME)
 # Binaries:
 pagerank: $(OBJS) pagerank.o $(DEP)
 	$(CC) -o $@ $(REAL_LDFLAGS) $^ -lm -lpthread 
-	
+
 #test: test.o $(DEP)
 #	$(CC) -o $@ $(REAL_LDFLAGS) $^ -lm -lpthread 
-	
+
 .c.o:
 	$(CC) -std=c99 -pedantic -c $(REAL_CFLAGS) $< -lm
 
